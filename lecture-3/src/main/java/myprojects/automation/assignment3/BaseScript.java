@@ -29,7 +29,7 @@ public abstract class BaseScript {
         switch (browser) {
         case "firefox" :
             propertyName = "gecko";
-            path = "geckodriver.exe";
+            path = "geckodriver";
             driver = new FirefoxDriver();
         case "googlechrome" :
             propertyName = "chrome";

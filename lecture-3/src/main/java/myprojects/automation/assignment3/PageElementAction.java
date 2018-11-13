@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -32,6 +33,7 @@ public class PageElementAction {
     }
 
     public static void set(String locator, String value) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(locator)));
         getElement(locator).sendKeys(value);
     }
 
@@ -40,10 +42,6 @@ public class PageElementAction {
         if (!elementText.contains(text)) {
             throw new RuntimeException("Текст \"%s\" не найден");
         }
-    }
-
-    public void waitForContentLoad() {
-         //wait.until();
     }
 
 }
