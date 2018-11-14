@@ -7,6 +7,7 @@ import myprojects.automation.assignment3.PageElementAction;
 public class CreateCategoryTest extends BaseScript {
 
     public static void main(String[] args) {
+        BaseScript.setConfiguredDriver();
         String categoryName = "Stuff";
         GeneralActions.login("webinar.test@gmail.com", "Xcg7299bnSmMuRLp9ITw");
         GeneralActions.createCategory(categoryName);

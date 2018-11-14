@@ -15,10 +15,10 @@ public class GeneralActions extends PageElementAction {
 
     public static void createCategory(String categoryName) {
         hover("[id = \"subtab-AdminCatalog\"]");
-        click(".submenu.outOfBounds [id = \"subtab-AdminCategories\"]");
+        click("[id = \"subtab-AdminCatalog\"] [id = \"subtab-AdminCategories\"] a");
         click(".process-icon-new");
         set("[name = \"name_1\"]", categoryName);
-        click("process-icon-save");
+        click("[id = \"category_form_submit_btn\"]");
         verifyElementWithTextPresent(".alert.alert-success:not(.hide)", "Создано");
     }
 

@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class PageElementAction {
 
     public static WebDriver driver;
-    private static WebDriverWait wait = new WebDriverWait(driver, 30);
+    public static WebDriverWait wait;
 
     public static WebElement getElement(String locator) {
         return driver.findElement(By.cssSelector(locator));
@@ -43,5 +43,4 @@ public class PageElementAction {
             throw new RuntimeException("Текст \"%s\" не найден");
         }
     }
-
 }

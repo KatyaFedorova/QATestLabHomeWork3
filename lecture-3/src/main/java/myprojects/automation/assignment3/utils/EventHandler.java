@@ -1,12 +1,13 @@
 package myprojects.automation.assignment3.utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-public class EventHandler implements WebDriverEventListener
-{
+public class EventHandler implements WebDriverEventListener {
+
     @Override
     public void beforeAlertAccept(WebDriver webDriver) {
 
@@ -84,7 +85,7 @@ public class EventHandler implements WebDriverEventListener
 
     @Override
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
-        System.out.println("We have clicked on element " + webDriver.toString());
+        System.out.println("We clicked on " + webDriver.getCurrentUrl());
     }
 
     @Override
@@ -108,7 +109,37 @@ public class EventHandler implements WebDriverEventListener
     }
 
     @Override
+    public void beforeSwitchToWindow(String s, WebDriver webDriver) {
+
+    }
+
+    @Override
+    public void afterSwitchToWindow(String s, WebDriver webDriver) {
+
+    }
+
+    @Override
     public void onException(Throwable throwable, WebDriver webDriver) {
+
+    }
+
+    @Override
+    public <X> void beforeGetScreenshotAs(OutputType<X> outputType) {
+
+    }
+
+    @Override
+    public <X> void afterGetScreenshotAs(OutputType<X> outputType, X x) {
+
+    }
+
+    @Override
+    public void beforeGetText(WebElement webElement, WebDriver webDriver) {
+
+    }
+
+    @Override
+    public void afterGetText(WebElement webElement, WebDriver webDriver, String s) {
 
     }
 }
